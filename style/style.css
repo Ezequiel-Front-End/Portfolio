@@ -25,7 +25,7 @@
 .dark-mode:root {
     --text-color: #000;
     --bg-color: #fafafa;
-    --second-bg-color: #22282f;
+    --second-bg-color: #fff;
     --main-color: #13bbff;
     --other-color: #c3cad5;
 
