@@ -39,7 +39,7 @@
             <li> <a href="#services">Services</a> </li>
             <li> <a href="#portfolio">Portfolio</a> </li>
             <li> <a href="#contact">Contact</a> </li>
-
+            <!-- <button id="minimizeBtn">Minimizar</button> -->
 
             <li>
 
@@ -375,6 +375,16 @@
 
     <!-- AOS script  -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        document.getElementById("minimizeBtn").onclick = function() {
+          window.open(
+            `${window.location.href}`, // URL do seu site
+            "minimizedWindow", // Nome da janela
+            "width=400,height=600,top=100,left=100,resizable=yes,scrollbars=yes"
+          );
+        };
+      </script>
 
 </body>
 
