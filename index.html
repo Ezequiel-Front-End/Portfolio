@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ezequiel Fernandes - Portfolio</title>
 
     <!-- link css  -->
-    <link rel="stylesheet" type="text/css" href="/style/style.css">
+    <link rel="stylesheet" type="text/css" href="src/style/style.css">
 
     <!-- box icons link -->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
     <!-- remix link -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
 
     <!-- AOS  CSS-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
+
 <body>
+
+    <!-- spinner loading  -->
+    <div id="spinner" class="spinner-container hidden">
+        <div class="spinner"></div>
+    </div>
 
     <!-- header  -->
     <header>
@@ -39,7 +46,7 @@
                 <label class="ui-switch">
                     <input type="checkbox">
                     <div class="slider">
-                      <div class="circle"></div>
+                        <div class="circle"></div>
                     </div>
                 </label>
 
@@ -53,37 +60,55 @@
 
     <!-- section home  -->
     <section id="home"></section>
-    
+
     <!-- hero  -->
     <section class="hero">
-            <div class="main-content" data-aos="fade-in">
-                <h4>Hi, There!</h4>
-                <h1>I'm <span>Ezequiel Fernandes</span> </h1>
-                <p>
-                    Se você deseja testemunhar a harmonia perfeita entre design e tecnologia, <br> mergulhe no meu portfólio de desenvolvedor Full Stack. A próxima grande <br> descoberta está a apenas um clique de distância.
-                </p>
+        <div class="main-content" data-aos="fade-in">
+            <h4>Hi, There!</h4>
+            <h1>I'm <span>Ezequiel Fernandes</span> </h1>
+            <p>
+                Se você deseja testemunhar a harmonia perfeita entre design e tecnologia, <br> mergulhe no meu portfólio
+                de desenvolvedor Full Stack. A próxima grande <br> descoberta está a apenas um clique de distância.
+            </p>
 
-                <div class="social">
-                    <a href="https://www.linkedin.com/in/ezequieldev/" target="_blank"><i class="ri-linkedin-fill"></i></a>
-                    <a href="https://github.com/Ezequiel-Front-End" target="_blank"><i class="ri-github-fill"></i></a>
-                    <a href="https://wa.link/1s38mm" target="_blank"><i class="ri-whatsapp-fill"></i></a>
-                </div>
+            <div class="music-player">
+                <audio id="audio" src="src/assets/music/music.mp3"></audio>
+                <div class="controls">
+                    <button id="playPauseBtn" class="play-pause-btn">
+                        <span>
+                            <i id="playIcon" class='bx bx-play'></i>
+                        </span>
 
-                <div class="main-btn">
-                    <a href="#" class="btn">Hire me</a>
-                    <!-- <a href="pdf/Python_avançado.pdf" download="" class="btn btn2">Download CV</a> -->
+                        <span>
+                            <i id="pauseIcon" class='bx bx-pause' style="display: none;"></i>
+                        </span>
+                    </button>
+                    <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+                    <input type="range" id="progressBar" value="0" max="100" />
                 </div>
             </div>
 
-            <div class="photo-content"  data-aos="fade-in">
-                <img src="assets/avatar.png" alt="meu avatar">
+            <div class="social">
+                <a href="https://www.linkedin.com/in/ezequieldev/" target="_blank"><i class="ri-linkedin-fill"></i></a>
+                <a href="https://github.com/Ezequiel-Front-End" target="_blank"><i class="ri-github-fill"></i></a>
+                <a href="https://wa.link/1s38mm" target="_blank"><i class="ri-whatsapp-fill"></i></a>
             </div>
+
+            <div class="main-btn">
+                <a href="#" class="btn">Hire me</a>
+                <!-- <a href="pdf/Python_avançado.pdf" download="" class="btn btn2">Download CV</a> -->
+            </div>
+        </div>
+
+        <div class="photo-content" data-aos="fade-in">
+            <img src="src/assets/avatar.png" alt="meu avatar">
+        </div>
     </section>
 
     <!-- about  -->
     <section class="about" id="about">
         <div class="about-img" data-aos="zoom-in-down">
-            <img src="assets/avatar.png" alt="meu avatar">
+            <img src="src/assets/avatar.png" alt="meu avatar">
         </div>
 
         <div class="about-text" data-aos="zoom-in-up">
@@ -95,43 +120,38 @@
                     Experience:
                     <span>1 Years</span>
                 </p>
-        
+
                 <p class="exp">
                     Specialty:
                     <span>Developer Web</span>
                 </p>
-    
+
                 <p class="exp">
                     Address:
                     <span>Itaquaquecetuba, SP</span>
                 </p>
 
-    
+
                 <p class="exp">
                     Email:
                     <span>ezequielfernandes912@gmail.com</span>
                 </p>
-    
+
                 <p class="exp">
                     Phone:
                     <span>+55 11 95853-8278</span>
                 </p>
-    
+
                 <p class="exp">
                     Freelance:
                     <span>Available</span>
                 </p>
-    
+
             </div>
-        
+
             <a href="#" class="btn">View All Projects</a>
 
         </div>
-
-       
-
-    
-
     </section>
 
     <!-- services  -->
@@ -146,11 +166,12 @@
                 <i class='bx bx-code-block'></i>
                 <h1>UI/UX Design</h1>
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos delectus optio odit, adipisci iure natus 
+                    Desenvolvimento de interfaces e experiências digitais que aliam design atraente à máxima usabilidade
+                    e satisfação do usuário.
                 </p>
 
-                <a href="#">
-                    Download
+                <a class="btn-navigation-ui">
+                    Ver mais
                     <i class="ri-arrow-right-line"></i>
                 </a>
             </div>
@@ -159,11 +180,12 @@
                 <i class='bx bx-code-alt'></i>
                 <h1>UI/UX Design</h1>
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos delectus optio odit, adipisci iure natus 
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos delectus optio odit, adipisci
+                    iure natus
                 </p>
 
-                <a href="#">
-                    Download
+                <a href="/">
+                    Ver mais
                     <i class="ri-arrow-right-line"></i>
                 </a>
             </div>
@@ -172,11 +194,12 @@
                 <i class='bx bxl-codepen'></i>
                 <h1>UI/UX Design</h1>
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos delectus optio odit, adipisci iure natus 
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos delectus optio odit, adipisci
+                    iure natus
                 </p>
 
-                <a href="#">
-                    Download
+                <a href="/">
+                    Ver mais
                     <i class="ri-arrow-right-line"></i>
                 </a>
             </div>
@@ -193,7 +216,8 @@
             <div class="row">
 
                 <a href="https://clone-da-netflix-henna.vercel.app/" target="_blank">
-                    <img src="https://imagem.natelinha.uol.com.br/original/netflix-login_92f71f1bd66c8333678d5142892e51f412ede9c9.jpeg" alt="Design para apresentação dos meus trabalhos">
+                    <img src="https://imagem.natelinha.uol.com.br/original/netflix-login_92f71f1bd66c8333678d5142892e51f412ede9c9.jpeg"
+                        alt="Design para apresentação dos meus trabalhos">
                 </a>
 
                 <div class="main-row">
@@ -210,7 +234,8 @@
 
             <div class="row">
                 <a href="https://chat-bot-ten-zeta.vercel.app/" target="_blank">
-                    <img src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/334804806/original/793cad2ae511c4c9b30c1d5e8206b8eb8ab21087/create-a-ai-chat-bot-embedded-website-for-you.png" alt="Design para apresentação dos meus trabalhos">
+                    <img src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/334804806/original/793cad2ae511c4c9b30c1d5e8206b8eb8ab21087/create-a-ai-chat-bot-embedded-website-for-you.png"
+                        alt="Design para apresentação dos meus trabalhos">
                 </a>
                 <div class="main-row">
                     <div class="row-text">
@@ -226,7 +251,8 @@
 
             <div class="row">
                 <a href="https://jogo-do-mario-wheat.vercel.app/" target="_blank">
-                <img src="https://img.elo7.com.br/product/600x380/4D7BAAA/papel-de-parede-super-mario-word-mario-e-luigi.jpg" alt="Design para apresentação dos meus trabalhos">
+                    <img src="https://img.elo7.com.br/product/600x380/4D7BAAA/papel-de-parede-super-mario-word-mario-e-luigi.jpg"
+                        alt="Design para apresentação dos meus trabalhos">
                 </a>
                 <div class="main-row">
                     <div class="row-text">
@@ -241,7 +267,8 @@
             </div>
 
             <div class="row">
-                <img src="https://www.jetersonlordano.com.br/cdn/posts/02-05-23-6450f1156b3e6/como-enviar-arquivos-para-o-github-sem-terminal.webp" alt="Design para apresentação dos meus trabalhos">
+                <img src="https://www.jetersonlordano.com.br/cdn/posts/02-05-23-6450f1156b3e6/como-enviar-arquivos-para-o-github-sem-terminal.webp"
+                    alt="Design para apresentação dos meus trabalhos">
                 <div class="main-row">
                     <div class="row-text">
                         <h5>Website Design</h5>
@@ -255,7 +282,8 @@
             </div>
 
             <div class="row">
-                <img src="https://www.jetersonlordano.com.br/cdn/posts/02-05-23-6450f1156b3e6/como-enviar-arquivos-para-o-github-sem-terminal.webp" alt="Design para apresentação dos meus trabalhos">
+                <img src="https://www.jetersonlordano.com.br/cdn/posts/02-05-23-6450f1156b3e6/como-enviar-arquivos-para-o-github-sem-terminal.webp"
+                    alt="Design para apresentação dos meus trabalhos">
                 <div class="main-row">
                     <div class="row-text">
                         <h5>Website Design</h5>
@@ -269,7 +297,8 @@
             </div>
 
             <div class="row">
-                <img src="https://www.jetersonlordano.com.br/cdn/posts/02-05-23-6450f1156b3e6/como-enviar-arquivos-para-o-github-sem-terminal.webp" alt="Design para apresentação dos meus trabalhos">
+                <img src="https://www.jetersonlordano.com.br/cdn/posts/02-05-23-6450f1156b3e6/como-enviar-arquivos-para-o-github-sem-terminal.webp"
+                    alt="Design para apresentação dos meus trabalhos">
                 <div class="main-row">
                     <div class="row-text">
                         <h5>Website Design</h5>
@@ -282,8 +311,23 @@
                 <h4>Website Development For Dark X</h4>
             </div>
         </div>
-        
+
     </section>
+
+    <!-- alert  -->
+    <div id="alert" class="info">
+        <div class="info__icon">
+            <i class='bx bxs-check-circle'></i>
+        </div>
+        <div class="info__title">Formulário enviado com Sucesso!</div>
+        <div class="info__close" onclick="closeAlert()">
+            <svg height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="m15.8333 5.34166-1.175-1.175-4.6583 4.65834-4.65833-4.65834-1.175 1.175 4.65833 4.65834-4.65833 4.6583 1.175 1.175 4.65833-4.6583 4.6583 4.6583 1.175-1.175-4.6583-4.6583z"
+                    fill="#393a37"></path>
+            </svg>
+        </div>
+    </div>
 
     <!-- contact  -->
     <section class="contact" id="contact">
@@ -292,11 +336,24 @@
         </div>
 
         <div class="contact-form" data-aos="zoom-in">
-            <form action="">
-                <input type="text" name="" id="" placeholder="Name" required >
-                <input type="email" name="" id="" placeholder="Email" required >
-                <textarea name="" id="" placeholder="Message" cols="30" rows="10"></textarea>
-                <input type="submit" value="Send Message" class="send-btn">
+            <form action="" id="myForm">
+                <div class="contact-form-input">
+                    <input type="text" name="nome" id="" placeholder="Name" onkeyup="nomeValidate(event)">
+                    <span class="error">*O campo nome é obrigatorio!</span>
+                </div>
+
+                <div class="contact-form-input">
+                    <input type="text" name="email" id="" placeholder="Email" onkeyup="emailValidate(event)">
+                    <span class="error">*O campo email é obrigatorio!</span>
+                </div>
+
+                <div class="contact-form-input">
+                    <textarea name="mensagem" id="" placeholder="Message" cols="30" rows="10"
+                        onkeyup="mensagemValidate(event)"></textarea>
+                    <span class="error">*O campo Mensagem é obrigatorio!</span>
+                </div>
+
+                <button type="submit" value="Send Message" class="send-btn"> Send </button>
             </form>
         </div>
 
@@ -314,12 +371,11 @@
     </footer>
 
     <!-- link script  -->
-    <script src="js/main.js" defer></script>
+    <script src="src/js/main.js" defer></script>
 
     <!-- AOS script  -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </body>
+
 </html>
-
-

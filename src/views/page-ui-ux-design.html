@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI/UX Design</title>
+
+    <!-- link css  -->
+    <link rel="stylesheet" href="../style/ui-ux.css" type="text/css">
+
+    <!-- box icons link -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- remix link -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- AOS  CSS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="confetti-container"></div>
+    
+    <!-- alert  -->
+    <div id="alert" class="info">
+        <div class="info__title">Nenhuma informação encontrada!</div>
+        <div class="info__close" onclick="closeAlert()">
+            <svg height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="m15.8333 5.34166-1.175-1.175-4.6583 4.65834-4.65833-4.65834-1.175 1.175 4.65833 4.65834-4.65833 4.6583 1.175 1.175 4.65833-4.6583 4.6583 4.6583 1.175-1.175-4.6583-4.6583z"
+                    fill="#393a37"></path>
+            </svg>
+        </div>
+    </div>
+
+    <!-- spinner loading  -->
+    <div id="spinner" class="spinner-container hidden">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- header  -->
+    <header>
+        <a href="/" class="logo" data-aos="fade-right">Developer <span>Full Stack</span> </a>
+
+        <button id="btn-goBack" data-aos="fade-right" data-aos-duration="1000">
+            <span><i class='bx bx-arrow-back'></i></span>
+        </button>
+
+    </header>
+
+    <div class="container" data-aos="fade-in" data-aos-duration="2000">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Digite para filtrar..." autocomplete="off">
+        </div>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Empresa</th>
+                        <th>Empresa</th>
+                        <th>Definições</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+        <div class="pagination" id="pagination"></div>
+        
+    </div>
+
+
+    <!-- script AOS  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- inicialize  -->
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- script   -->
+    <script src="../js/ui-ux.js"></script>
+
+</body>
+
+</html>
