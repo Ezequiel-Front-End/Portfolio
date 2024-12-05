@@ -57,11 +57,11 @@ const nomeValidate = (nome) => {
     let typeNome = nome.target ? nome.target.value : nome;
 
     if (typeNome === '') {
-        inputs[1].style.boxShadow = '0 0 5px 2px red';
+        inputs[2].style.boxShadow = '0 0 5px 2px red';
         legendErros[0].style.display = "block";
         return false;
     } else {
-        inputs[1].style.boxShadow = '';
+        inputs[2].style.boxShadow = '';
         legendErros[0].style.display = "none";
         return true;
     }
@@ -72,11 +72,11 @@ const emailValidate = (email) => {
     let typeRegex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i;
 
     if (typeRegex.test(typeEmail)) {
-        inputs[2].style.boxShadow = '';
+        inputs[3].style.boxShadow = '';
         legendErros[1].style.display = "none";
         return true;
     } else {
-        inputs[2].style.boxShadow = '0 0 5px 2px red';
+        inputs[3].style.boxShadow = '0 0 5px 2px red';
         legendErros[1].style.display = "block";
         return false;
     }
@@ -171,12 +171,12 @@ audio.addEventListener('timeupdate', () => {
 playPauseBtn.addEventListener('click', () => {
   if (audio.paused) {
     audio.play();
-    playIcon.style.display = 'none'; // Esconde o ícone de play
-    pauseIcon.style.display = 'inline-block'; // Exibe o ícone de pause
+    playIcon.style.display = 'none'; 
+    pauseIcon.style.display = 'inline-block'; 
   } else {
     audio.pause();
-    playIcon.style.display = 'inline-block'; // Exibe o ícone de play
-    pauseIcon.style.display = 'none'; // Esconde o ícone de pause
+    playIcon.style.display = 'inline-block'; 
+    pauseIcon.style.display = 'none'; 
   }
 });
 
